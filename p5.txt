@@ -27,7 +27,7 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 3. Antes de analizar las tramas, mira las estadísticas generales que aparecen en el menú de Statistics. En el apartado de jerarquía de protocolos (Protocol Hierarchy) se puede ver el porcentaje del tráfico correspondiente al protocolo TCP y UDP.
  ** ¿Cuál de los dos es mayor? ¿Es esto consistente con una aplicación que transmite en tiempo real?
     
-    El porcentaje tanto de paquetes enviados como de porcentaje de bytes es mayor mediante UDP. Ademas sabemos que UDP es mejor para transmitir a tiempo real porque es mas rapido y seguro.
+    El porcentaje tanto de paquetes enviados como de porcentaje de bytes es mayor mediante UDP. Ademas sabemos que UDP es mejor para transmitir a tiempo real porque es mas rapido y seguro. Es decir, se transmite en tiempo real y efectivamente, es consistente.
 
  ** ¿Qué otros protocolos podemos ver en la jerarquía de protocolos?
     
@@ -35,8 +35,13 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 4. Observa por encima el flujo de tramas en el menú de Statistics en IO Graphs. La captura que estamos viendo incluye desde la inicialización (registro) de la aplicación hasta su finalización, con una llamada entremedias.
  ** Filtra por sip para conocer cuándo se envían paquetes SIP. ¿En qué segundos tienen lugar esos envíos?
- ** Y los paquetes con RTP, ¿cuándo se envían?
 
+    En los segundos 7,14,16.4, 38, 39, 55.
+        
+
+ ** Y los paquetes con RTP, ¿cuándo se envían?
+    
+    En los segundos, 17, 18, 19, 20, 21, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38.
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
