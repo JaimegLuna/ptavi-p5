@@ -18,11 +18,11 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
  ** ¿Cuánto tiempo dura la captura?
 
-    54.14 segundos
+    56.14 segundos
 
  ** ¿Qué IP tiene la máquina donde se ha efectuado la captura? ¿Se trata de una IP pública o de una IP privada? ¿Por qué lo sabes?
 
-    La captura se hace en la IP 192.168.1.34 ya que en nuestra captura de wireshark, esta IP es o la fuente o el destino de los paquetes. Es una IP privada porque sabemos que la Ip de nuestro terminal es 212.128.254.172 y al observar la que aparece en la captura vemos que nol coincide, es decir, esta detras de un NAT. 
+    La captura se hace en la IP 192.168.1.34 ya que en nuestra captura de wireshark, esta IP es o la fuente o el destino de los paquetes. Es una IP privada porque sabemos que la Ip de nuestro terminal es otra y al observar la que aparece en la captura vemos que no coincide, es decir, esta detras de un NAT. 
 
 3. Antes de analizar las tramas, mira las estadísticas generales que aparecen en el menú de Statistics. En el apartado de jerarquía de protocolos (Protocol Hierarchy) se puede ver el porcentaje del tráfico correspondiente al protocolo TCP y UDP.
  ** ¿Cuál de los dos es mayor? ¿Es esto consistente con una aplicación que transmite en tiempo real?
