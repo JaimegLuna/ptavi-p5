@@ -252,9 +252,14 @@ Se ha capturado una sesión SIP (archivo sip.cap.gz), que se puede abrir con Wir
 
 Captura de una sesión SIP
 
-Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.net. Tendrás que dar de alta una cuenta en www.ekiga.net con el navegador. Recuerda también que has de comenzar a capturar tramas antes de arrancar Ekiga para ver todo el proceso en el que participa SIP. Para realizar los siguientes ejercicios, deberás crearte una cuenta en ekiga.net y darte de alta la lanzar la aplicación.
+17. Dirígete a la web http://www.ekiga.net con el navegador y créate
+una cuenta. Lanza Ekiga, y config´uralo con los datos de la cuenta
+que te acabas de crear. Comprueba que est´as conectado (En la barra
+al final de la ventana podr´as ver “Connected”). Al terminar, cierra
+completamente Ekiga. 
 
-17. Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
+
+Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
  ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
 
     Si, EL DNS es necesario para la asignacion de nombres de dominio a la IP y el uso de STUN para conocer la IP QUE ESTA TRAS EL NAT. 
@@ -265,7 +270,11 @@ Captura una sesión SIP de una conversación con el número SIP sip:9999@qxip.ne
 Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PRACK, es decir, permite los métodos que se mencionan en dicho campo. En cambio en la captura que analizamos con anterioridad podemos observar que el campo Allow era más reducido, ya que solamente permitía los métodos: INVITE, ACK, OPTIONS, BYE, CANCEL, NOTIFY, REFER, MESSAGE.
  Otra de las diferencias es que se emplean puertos distintos.    
 
-18. Identifica las diferencias existentes entre esta conversación y la conversación anterior:
+18.Captura una sesión SIP de una conversación con el núumero SIP sip:9999@qxip.net.
+Recuerda que has de comenzar a capturar tramas antes de arrancar
+Ekiga para ver todo el proceso.
+
+Identifica las diferencias existentes entre esta conversación y la conversación anterior:
  ** ¿Cuántos flujos tenemos?
 
     Tenemos dos flujos. Desde un emisor (nosotros) a un receptor es uno de los flujos y el otro en sentido opuesto (receptor-emisor). Ambos flujos son de audio (g711U).
@@ -290,6 +299,8 @@ Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PR
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 19. Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como sip.libpcap. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.libpcap y añadirlo al repositorio.
+
+
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
