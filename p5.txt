@@ -265,27 +265,6 @@ Ekiga para ver todo el proceso.
 
 
 
-    
-
- ** ¿Cuál es su periodicidad?
-
-        
-    
- ** ¿Cuánto es el valor máximo del delta y los valores medios y máximo del jitter?
-
-    Source Port--->5090 ; Max delta--->30.646 ; Mean jitter--->3.476 ; Max jitter--->6.294
-    Source Port--->34810 ; Max delta--->75.600 ; Mean jitter--->1.393 ; Max jitter--->6.294
-
- ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo? Comprueba que poniendo un valor demasiado pequeño para el buffer de jitter, la conversación puede no tener la calidad necesaria.
-
-    Para poder reproducir la conversación desde Wireshark, debemos ir a Telephony y elegir la opción VoIP Calls, después primero damos a Play y luego Decode, y de esta forma se reproduce. Al reproducir con un buffer de jitter muy pequeño la conversación se escucha entrecortada, se pierden palabras.Lo he intentado con un buffer muy pequeño.
-
- ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net?
-
-    Ofrece un servicio de canciones ocmo podemos ver al reproducir el auido.
-
-[Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
-
 19. Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
  ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
 
@@ -301,6 +280,7 @@ Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PR
 20. Identifica las diferencias existentes entre esta conversación y la conversación
 anterior:
  ** ¿Cuántos flujos tenemos?
+
 Tenemos dos flujos. Desde un emisor (nosotros) a un receptor es uno de los flujos y el otro en sentido opuesto (receptor-emisor). Ambos flujos son de audio (g711U).
 
  ** ¿Cuál es su periodicidad?
@@ -308,20 +288,27 @@ Tenemos dos flujos. Desde un emisor (nosotros) a un receptor es uno de los flujo
 
  **¿Cuánto es el valor máximo del delta y los valores medios y
 máximo del jitter?
+
  Source Port--->5090 ; Max delta--->30.646 ; Mean jitter--->3.476 ; Max jitter--->6.294
     Source Port--->34810 ; Max delta--->75.600 ; Mean jitter--->1.393 ; Max jitter--->6.294
 
  ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo?
 Comprueba que poniendo un valor demasiado pequeño para el
 buffer de jitter, la conversacón puede no tener la calidad necesaria.
+
+Para poder reproducir la conversación desde Wireshark, debemos ir a Telephony y elegir la opción VoIP Calls, después primero damos a Play y luego Decode, y de esta forma se reproduce. Al reproducir con un buffer de jitter muy pequeño la conversación se escucha entrecortada, se pierden palabras.Lo he intentado con un buffer muy pequeño.
+
+
  ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net?
+
+Ofrece un servicio de canciones ocmo podemos ver al reproducir el auido.
 
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
 
 
-Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como sip.libpcap. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.libpcap y añadirlo al repositorio.
+21. Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como p5.pcapng. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.pcapng y añadirlo al repositorio.
 
 
 
