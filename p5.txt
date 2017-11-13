@@ -263,10 +263,9 @@ completamente Ekiga.
 Recuerda que has de comenzar a capturar tramas antes de arrancar
 Ekiga para ver todo el proceso.
 
-Identifica las diferencias existentes entre esta conversación y la conversación anterior:
- ** ¿Cuántos flujos tenemos?
 
-    Tenemos dos flujos. Desde un emisor (nosotros) a un receptor es uno de los flujos y el otro en sentido opuesto (receptor-emisor). Ambos flujos son de audio (g711U).
+
+    
 
  ** ¿Cuál es su periodicidad?
 
@@ -302,10 +301,16 @@ Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PR
 20. Identifica las diferencias existentes entre esta conversación y la conversación
 anterior:
  ** ¿Cuántos flujos tenemos?
+Tenemos dos flujos. Desde un emisor (nosotros) a un receptor es uno de los flujos y el otro en sentido opuesto (receptor-emisor). Ambos flujos son de audio (g711U).
 
  ** ¿Cuál es su periodicidad?
+
+
  **¿Cuánto es el valor máximo del delta y los valores medios y
 máximo del jitter?
+ Source Port--->5090 ; Max delta--->30.646 ; Mean jitter--->3.476 ; Max jitter--->6.294
+    Source Port--->34810 ; Max delta--->75.600 ; Mean jitter--->1.393 ; Max jitter--->6.294
+
  ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo?
 Comprueba que poniendo un valor demasiado pequeño para el
 buffer de jitter, la conversacón puede no tener la calidad necesaria.
