@@ -257,18 +257,7 @@ una cuenta. Lanza Ekiga, y config´uralo con los datos de la cuenta
 que te acabas de crear. Comprueba que est´as conectado (En la barra
 al final de la ventana podr´as ver “Connected”). Al terminar, cierra
 completamente Ekiga. 
-
-
-Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
- ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
-
-    Si, EL DNS es necesario para la asignacion de nombres de dominio a la IP y el uso de STUN para conocer la IP QUE ESTA TRAS EL NAT. 
-
- ** ¿Son diferentes el registro y la descripción de la sesión?
-
-     Podemos ver que son diferentes en el campo Allow, ya que el REGISTER que hemos capturado tiene el siguiente campo: 
-Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PRACK, es decir, permite los métodos que se mencionan en dicho campo. En cambio en la captura que analizamos con anterioridad podemos observar que el campo Allow era más reducido, ya que solamente permitía los métodos: INVITE, ACK, OPTIONS, BYE, CANCEL, NOTIFY, REFER, MESSAGE.
- Otra de las diferencias es que se emplean puertos distintos.    
+    
 
 18.Captura una sesión SIP de una conversación con el núumero SIP sip:9999@qxip.net.
 Recuerda que has de comenzar a capturar tramas antes de arrancar
@@ -298,7 +287,36 @@ Identifica las diferencias existentes entre esta conversación y la conversació
 
 [Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
 
-19. Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como sip.libpcap. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.libpcap y añadirlo al repositorio.
+19. Observa las diferencias en el inicio de la conversación entre el entorno del laboratorio y el del ejercicio anterior:
+ ** ¿Es necesario el uso de DNS y STUN? ¿Por qué?
+
+    Si, EL DNS es necesario para la asignacion de nombres de dominio a la IP y el uso de STUN para conocer la IP QUE ESTA TRAS EL NAT. 
+
+ ** ¿Son diferentes el registro y la descripción de la sesión?
+
+     Podemos ver que son diferentes en el campo Allow, ya que el REGISTER que hemos capturado tiene el siguiente campo: 
+Allow: INVITE,ACK,OPTIONS,BYE,CANCEL,SUBSCRIBE,NOTIFY,REFER,MESSAGE,INFO,PING,PRACK, es decir, permite los métodos que se mencionan en dicho campo. En cambio en la captura que analizamos con anterioridad podemos observar que el campo Allow era más reducido, ya que solamente permitía los métodos: INVITE, ACK, OPTIONS, BYE, CANCEL, NOTIFY, REFER, MESSAGE.
+ Otra de las diferencias es que se emplean puertos distintos.
+
+
+20. Identifica las diferencias existentes entre esta conversación y la conversación
+anterior:
+ ** ¿Cuántos flujos tenemos?
+
+ ** ¿Cuál es su periodicidad?
+ **¿Cuánto es el valor máximo del delta y los valores medios y
+máximo del jitter?
+ ** ¿Podrías reproducir la conversación desde Wireshark? ¿Cómo?
+Comprueba que poniendo un valor demasiado pequeño para el
+buffer de jitter, la conversacón puede no tener la calidad necesaria.
+ ** ¿Sabrías decir qué tipo de servicio ofrece sip:9999@qxip.net?
+
+
+[Al terminar el ejercicio es recomendable hacer commit de los ficheros modificados]
+
+
+
+Filtra por los paquetes SIP de la captura y guarda únicamente los paquetes SIP como sip.libpcap. Abre el fichero guardado para cerciorarte de que lo has hecho bien. Deberás guardarlo en un archivo de nombre p5.libpcap y añadirlo al repositorio.
 
 
 
